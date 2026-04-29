@@ -191,7 +191,6 @@ Workflow file:
 ## 👨‍💻 Author
 
 EDEH CHIJIOKE
-Backend Engineer | API & Validation Systems Enthusiast
 
 ---
 
