@@ -1,0 +1,9 @@
+{
+  "$id": "wallet.schema.json",
+  "type": "object",
+  "required": ["balance", "currency"],
+  "properties": {
+    "balance": { "type": "number", "minimum": 0 },
+    "currency": { "type": "string", "enum": ["NGN", "USD", "EUR", "BTC"] }
+  }
+}

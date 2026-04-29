@@ -1,0 +1,18 @@
+openapi: 3.0.0
+info:
+  title: Advanced Payment API
+  version: 1.0.0
+
+paths:
+  /payment/initiate:
+    post:
+      summary: Initiate a payment
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "../schemas/payment.schema.json"
+      responses:
+        "200":
+          description: Payment initiated successfully

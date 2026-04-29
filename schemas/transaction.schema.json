@@ -1,0 +1,10 @@
+{
+  "$id": "transaction.schema.json",
+  "type": "object",
+  "required": ["tx_id", "status", "payment"],
+  "properties": {
+    "tx_id": { "type": "string" },
+    "status": { "type": "string", "enum": ["pending", "success", "failed"] },
+    "payment": { "$ref": "payment.schema.json" }
+  }
+}

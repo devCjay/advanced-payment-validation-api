@@ -1,0 +1,10 @@
+{
+  "$id": "user.schema.json",
+  "type": "object",
+  "required": ["id", "email"],
+  "properties": {
+    "id": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "country": { "type": "string" }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "advanced-payment-validation-api",
+  "version": "1.0.0",
+  "description": "A backend API demonstrating JSON Schema validation with OpenAPI and Ajv in a payment system",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"No tests defined yet\" && exit 0"
+  },
+  "keywords": [
+    "json-schema",
+    "openapi",
+    "ajv",
+    "validation",
+    "payment-api",
+    "express",
+    "backend"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^2.1.1",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$id": "payment.schema.json",
+  "type": "object",
+  "required": ["amount", "currency", "method", "user_id"],
+  "properties": {
+    "amount": {
+      "type": "number",
+      "minimum": 100
+    },
+    "currency": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string",
+      "enum": ["card", "bank", "crypto"]
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "crypto_details": {
+      "type": ["object", "null"],
+      "properties": {
+        "wallet_address": { "type": "string" },
+        "network": { "type": "string" }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "method": { "const": "crypto" }
+        }
+      },
+      "then": {
+        "required": ["crypto_details"]
+      }
+    }
+  ]
+}
